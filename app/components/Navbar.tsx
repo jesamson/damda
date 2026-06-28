@@ -1,0 +1,111 @@
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
+
+const links = [
+  { href: "/", label: "Home" },
+  { href: "/menu", label: "Menu" },
+  { href: "/about", label: "About" },
+];
+
+const ORDER_URL =
+  "https://www.grubhub.com/restaurant/the-latte-shop-228-1st-st-los-angeles/13157200";
+
+export default function Navbar() {
+  const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+
+  return (
+    <nav className="sticky top-0 z-50 bg-burgundy text-white">
+      <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between gap-6">
+        <Link
+          href="/"
+          className="font-heading text-2xl tracking-[0.35em] font-medium shrink-0"
+        >
+          DAMDA
+        </Link>
+
+        {/* Desktop nav */}
+        <ul className="hidden md:flex gap-10 text-xs tracking-widest uppercase">
+          {links.map(({ href, label }) => (
+            <li key={href}>
+              <Link
+                href={href}
+                className={`transition-opacity hover:opacity-70 ${
+                  pathname === href ? "border-b border-white pb-0.5" : ""
+                }`}
+              >
+                {label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+
+        {/* Order Now — desktop */}
+        <a
+          href={ORDER_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hidden md:inline-block bg-white text-burgundy px-6 py-2 text-xs tracking-widest uppercase font-semibold hover:bg-white/90 transition-colors shrink-0"
+        >
+          Order Now
+        </a>
+
+        {/* Mobile toggle */}
+        <button
+          className="md:hidden flex flex-col gap-1.5 p-1 ml-auto"
+          onClick={() => setOpen(!open)}
+          aria-label="Toggle menu"
+        >
+          <span
+            className={`block w-6 h-0.5 bg-white transition-transform origin-center ${
+              open ? "rotate-45 translate-y-2" : ""
+            }`}
+          />
+          <span
+            className={`block w-6 h-0.5 bg-white transition-opacity ${
+              open ? "opacity-0" : ""
+            }`}
+          />
+          <span
+            className={`block w-6 h-0.5 bg-white transition-transform origin-center ${
+              open ? "-rotate-45 -translate-y-2" : ""
+            }`}
+          />
+        </button>
+      </div>
+
+      {/* Mobile menu */}
+      {open && (
+        <div className="md:hidden bg-burgundy-dark border-t border-white/10">
+          <ul className="max-w-6xl mx-auto px-6 py-5 flex flex-col gap-5">
+            {links.map(({ href, label }) => (
+              <li key={href}>
+                <Link
+                  href={href}
+                  className="text-xs tracking-widest uppercase hover:opacity-70 transition-opacity"
+                  onClick={() => setOpen(false)}
+                >
+                  {label}
+                </Link>
+              </li>
+            ))}
+            <li>
+              <a
+                href={ORDER_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-white text-burgundy px-6 py-2.5 text-xs tracking-widest uppercase font-semibold hover:bg-white/90 transition-colors"
+                onClick={() => setOpen(false)}
+              >
+                Order Now
+              </a>
+            </li>
+          </ul>
+        </div>
+      )}
+    </nav>
+  );
+}
