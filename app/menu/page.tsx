@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Menu — Damda",
-  description: "Explore our espresso drinks, cold brew, and seasonal specials.",
+  description: "Explore our espresso drinks and cold brew offerings.",
 };
 
 const menuItems = [
@@ -33,7 +33,7 @@ const menuItems = [
     category: "Espresso Bar",
     price: "$5.50",
     description: "Smooth, creamy, and grounding. A cup to settle into.",
-    photo: "photo-1561047029-3000c68339ca",
+    photo: "photo-1494790108377-be9c29b29330",
   },
   {
     name: "Americano",
@@ -62,13 +62,6 @@ const menuItems = [
     price: "$6.50",
     description: "Ceremonial grade matcha. Hot or iced.",
     photo: "photo-1529474944862-1dc3da8b8f43",
-  },
-  {
-    name: "Chai Latte",
-    category: "Seasonal",
-    price: "$5.50",
-    description: "Spiced, warming, and deeply aromatic.",
-    photo: "photo-1547592166-23ac45744acd",
   },
 ];
 
