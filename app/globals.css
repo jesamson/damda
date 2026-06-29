@@ -8,12 +8,12 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-burgundy: #5c0018;
-  --color-burgundy-dark: #420010;
-  --color-cream: #f4f4f4;
+  --color-burgundy: #760605;
+  --color-burgundy-dark: #550404;
+  --color-cream: #F3FCEB;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --font-heading: var(--font-playfair);
+  --font-heading: var(--font-black-han-sans);
 }
 
 body {

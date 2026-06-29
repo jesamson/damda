@@ -13,6 +13,50 @@ const links = [
 const ORDER_URL =
   "https://www.grubhub.com/restaurant/the-latte-shop-228-1st-st-los-angeles/13157200";
 
+function DamdaLogo() {
+  return (
+    <svg
+      viewBox="0 0 72 108"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="h-10 w-auto"
+      aria-label="Damda"
+    >
+      <rect
+        x="3.5"
+        y="3.5"
+        width="65"
+        height="101"
+        rx="32.5"
+        stroke="#F3FCEB"
+        strokeWidth="4"
+      />
+      <text
+        x="36"
+        y="44"
+        textAnchor="middle"
+        dominantBaseline="middle"
+        fontSize="36"
+        fill="#F3FCEB"
+        style={{ fontFamily: "var(--font-black-han-sans), sans-serif" }}
+      >
+        담
+      </text>
+      <text
+        x="36"
+        y="84"
+        textAnchor="middle"
+        dominantBaseline="middle"
+        fontSize="36"
+        fill="#F3FCEB"
+        style={{ fontFamily: "var(--font-black-han-sans), sans-serif" }}
+      >
+        다
+      </text>
+    </svg>
+  );
+}
+
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
@@ -20,11 +64,8 @@ export default function Navbar() {
   return (
     <nav className="sticky top-0 z-50 bg-burgundy text-white">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between gap-6">
-        <Link
-          href="/"
-          className="font-heading text-2xl tracking-[0.35em] font-medium shrink-0"
-        >
-          DAMDA
+        <Link href="/" className="shrink-0 py-1">
+          <DamdaLogo />
         </Link>
 
         {/* Desktop nav */}
@@ -48,7 +89,7 @@ export default function Navbar() {
           href={ORDER_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden md:inline-block bg-white text-burgundy px-6 py-2 text-xs tracking-widest uppercase font-semibold hover:bg-white/90 transition-colors shrink-0"
+          className="hidden md:inline-block bg-cream text-burgundy px-6 py-2 text-xs tracking-widest uppercase font-semibold hover:opacity-90 transition-opacity shrink-0"
         >
           Order Now
         </a>
@@ -97,7 +138,7 @@ export default function Navbar() {
                 href={ORDER_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-white text-burgundy px-6 py-2.5 text-xs tracking-widest uppercase font-semibold hover:bg-white/90 transition-colors"
+                className="inline-block bg-cream text-burgundy px-6 py-2.5 text-xs tracking-widest uppercase font-semibold hover:opacity-90 transition-opacity"
                 onClick={() => setOpen(false)}
               >
                 Order Now
