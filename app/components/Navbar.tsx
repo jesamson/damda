@@ -33,23 +33,23 @@ function DamdaLogo() {
       />
       <text
         x="36"
-        y="44"
+        y="31"
         textAnchor="middle"
         dominantBaseline="middle"
-        fontSize="36"
+        fontSize="34"
         fill="#fcfaec"
-        style={{ fontFamily: "var(--font-black-han-sans), sans-serif" }}
+        style={{ fontFamily: "sans-serif" }}
       >
         담
       </text>
       <text
         x="36"
-        y="84"
+        y="77"
         textAnchor="middle"
         dominantBaseline="middle"
-        fontSize="36"
+        fontSize="34"
         fill="#fcfaec"
-        style={{ fontFamily: "var(--font-black-han-sans), sans-serif" }}
+        style={{ fontFamily: "sans-serif" }}
       >
         다
       </text>
