@@ -32,37 +32,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Polka dot divider */}
-      <div className="polka-dots h-24" />
-
-      {/* Philosophy strip */}
-      <section className="bg-cream py-24 border-b border-gray-100">
-        <div className="max-w-5xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-16 text-center">
-          {[
-            {
-              title: "Passion Behind Each Pour",
-              body: "Every cup is a deliberate act — sourced thoughtfully, brewed carefully, served with care.",
-            },
-            {
-              title: "Small Batch Roasts",
-              body: "We work with roasters who share our commitment to quality, flavor, and sustainability.",
-            },
-            {
-              title: "A Place to Belong",
-              body: "Damda is more than coffee. It's a corner of Los Angeles to slow down and be present.",
-            },
-          ].map(({ title, body }) => (
-            <div key={title}>
-              <div className="w-8 h-0.5 bg-burgundy mx-auto mb-6" />
-              <h2 className="font-heading text-xl text-burgundy mb-4 tracking-wide">
-                {title}
-              </h2>
-              <p className="text-sm text-gray-500 leading-relaxed">{body}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* CTA band */}
       <section className="bg-cream border-t border-b border-gray-100 py-20 text-center">
         <p className="font-heading text-3xl md:text-4xl text-burgundy mb-6 italic">
