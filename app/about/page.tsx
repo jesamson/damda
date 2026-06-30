@@ -25,46 +25,13 @@ export default function AboutPage() {
       <section className="py-24">
         <div className="max-w-2xl mx-auto px-6 space-y-8 text-gray-600 leading-relaxed">
           <p className="text-xl text-gray-800 leading-relaxed">
-            At Damda, we believe that coffee is more than a morning ritual — it
-            is a craft, a conversation, and a small act of care in the middle of
-            an ordinary day.
+            Damda is a contemporary café and lifestyle brand rooted in the
+            Korean word 담다 — "to hold" and "to pour."
           </p>
 
           <p>
-            Nestled in the heart of Los Angeles, Damda was born from a simple
-            idea: that every cup should be made with purpose. We slow down so
-            you don't have to rush. We pay attention to the details — the grind,
-            the temperature, the pour — so that what reaches your hands is
-            something worth pausing for.
-          </p>
-
-          <p>
-            Our name, Damda (담다), comes from the Korean word meaning "to
-            contain" or "to hold." We hold our craft with intention. We hold
-            space for our community. And we hold high standards for every drink
-            that leaves our counter.
-          </p>
-
-          <p>
-            We source beans from roasters who share our values — people who
-            treat farming relationships with the same care we bring to the bar.
-            Every batch is chosen because it tells a story worth sharing over a
-            warm cup.
-          </p>
-
-          {/* Pull quote */}
-          <div className="border-l-4 border-burgundy pl-8 py-3 my-12">
-            <p className="font-heading text-2xl text-burgundy italic leading-relaxed">
-              "Every cup is an invitation to be present — to taste, to breathe,
-              and to belong."
-            </p>
-          </div>
-
-          <p>
-            Whether you stop by for a quick espresso before work or settle in
-            for an afternoon with a latte and a book, you are welcome here.
-            Damda is a place to arrive, to be still, and to leave a little more
-            yourself than when you walked in.
+            More than a coffee shop, Damda is a space for everyday rituals,
+            bold energy, and thoughtful moments.
           </p>
         </div>
       </section>
