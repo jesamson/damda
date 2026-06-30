@@ -32,6 +32,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Polka dot divider */}
+      <div className="polka-dots h-24" />
+
       {/* CTA band */}
       <section className="bg-cream border-t border-b border-gray-100 py-20 text-center">
         <p className="font-heading text-3xl md:text-4xl text-burgundy mb-6 italic">
