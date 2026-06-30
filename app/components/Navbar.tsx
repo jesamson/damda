@@ -63,13 +63,13 @@ export default function Navbar() {
 
   return (
     <nav className="sticky top-0 z-50 bg-burgundy text-white">
-      <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between gap-6">
-        <Link href="/" className="shrink-0 py-1">
+      <div className="max-w-6xl mx-auto px-6 h-16 grid grid-cols-3 items-center">
+        <Link href="/" className="py-1 justify-self-start">
           <DamdaLogo />
         </Link>
 
-        {/* Desktop nav */}
-        <ul className="hidden md:flex gap-10 text-xs tracking-widest uppercase">
+        {/* Desktop nav — center column */}
+        <ul className="hidden md:flex justify-center gap-10 text-xs tracking-widest uppercase">
           {links.map(({ href, label }) => (
             <li key={href}>
               <Link
@@ -84,19 +84,21 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* Order Now — desktop */}
-        <a
-          href={ORDER_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hidden md:inline-block bg-cream text-burgundy px-6 py-2 text-xs tracking-widest uppercase font-semibold hover:opacity-90 transition-opacity shrink-0"
-        >
-          Order Now
-        </a>
+        {/* Order Now — right column */}
+        <div className="hidden md:flex justify-end">
+          <a
+            href={ORDER_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-cream text-burgundy px-6 py-2 text-xs tracking-widest uppercase font-semibold hover:opacity-90 transition-opacity"
+          >
+            Order Now
+          </a>
+        </div>
 
         {/* Mobile toggle */}
         <button
-          className="md:hidden flex flex-col gap-1.5 p-1 ml-auto"
+          className="md:hidden flex flex-col gap-1.5 p-1 justify-self-end col-start-3"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >

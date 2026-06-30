@@ -70,7 +70,7 @@ export default function AboutPage() {
       </section>
 
       {/* Info strip */}
-      <section className="bg-white border-t border-gray-100 py-16">
+      <section className="bg-cream border-t border-gray-100 py-16">
         <div className="max-w-4xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
           <div>
             <div className="w-8 h-0.5 bg-burgundy mb-5" />
@@ -108,7 +108,7 @@ export default function AboutPage() {
       </section>
 
       {/* Menu CTA */}
-      <section className="bg-white py-20 text-center border-t border-gray-100">
+      <section className="bg-cream py-20 text-center border-t border-gray-100">
         <p className="font-heading text-2xl text-gray-800 mb-6">
           Ready to see what we brew?
         </p>

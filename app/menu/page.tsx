@@ -87,7 +87,7 @@ export default function MenuPage() {
       </section>
 
       {/* Menu grid */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-cream">
         <div className="max-w-6xl mx-auto px-6 space-y-20">
           {categories.map((category) => (
             <div key={category}>
@@ -134,7 +134,7 @@ export default function MenuPage() {
       </section>
 
       {/* Note */}
-      <section className="bg-white border-t border-gray-100 py-12 text-center">
+      <section className="bg-cream border-t border-gray-100 py-12 text-center">
         <p className="text-sm text-gray-400 max-w-lg mx-auto">
           Menu and prices subject to change. Ask your barista about milk
           alternatives, seasonal offerings, and daily specials.

@@ -18,13 +18,13 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/menu"
-              className="bg-white text-burgundy px-10 py-3.5 text-xs tracking-widest uppercase font-semibold hover:bg-white/90 transition-colors"
+              className="bg-cream text-burgundy px-10 py-3.5 text-xs tracking-widest uppercase font-semibold hover:bg-cream/90 transition-colors"
             >
               View Menu
             </Link>
             <Link
               href="/about"
-              className="border border-white/50 text-white px-10 py-3.5 text-xs tracking-widest uppercase hover:border-white hover:bg-white/10 transition-colors"
+              className="border border-white/50 text-white px-10 py-3.5 text-xs tracking-widest uppercase hover:border-white hover:bg-cream/10 transition-colors"
             >
               Our Story
             </Link>
@@ -36,7 +36,7 @@ export default function Home() {
       <div className="polka-dots h-24" />
 
       {/* Philosophy strip */}
-      <section className="bg-white py-24 border-b border-gray-100">
+      <section className="bg-cream py-24 border-b border-gray-100">
         <div className="max-w-5xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-16 text-center">
           {[
             {
@@ -64,7 +64,7 @@ export default function Home() {
       </section>
 
       {/* CTA band */}
-      <section className="bg-white border-t border-b border-gray-100 py-20 text-center">
+      <section className="bg-cream border-t border-b border-gray-100 py-20 text-center">
         <p className="font-heading text-3xl md:text-4xl text-burgundy mb-6 italic">
           "Every cup is an invitation to be present."
         </p>
