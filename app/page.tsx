@@ -4,8 +4,8 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="min-h-[calc(100vh-4rem)] bg-burgundy flex items-center justify-center text-white text-center px-6">
-        <div className="max-w-2xl">
+      <section className="min-h-[calc(100vh-4rem)] bg-burgundy flex items-center justify-center text-white text-center">
+        <div className="max-w-2xl px-6">
           <p className="text-xs tracking-[0.6em] uppercase text-white/60 mb-4">
             COFFEE &amp; MORE
           </p>
@@ -32,9 +32,12 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Polka dot divider */}
+      <div className="polka-dots h-24" />
+
       {/* Philosophy strip */}
-      <section className="bg-white py-24 px-6 border-b border-gray-100">
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-16 text-center">
+      <section className="bg-white py-24 border-b border-gray-100">
+        <div className="max-w-5xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-16 text-center">
           {[
             {
               title: "Passion Behind Each Pour",
@@ -61,7 +64,7 @@ export default function Home() {
       </section>
 
       {/* CTA band */}
-      <section className="bg-white border-t border-b border-gray-100 py-20 px-6 text-center">
+      <section className="bg-white border-t border-b border-gray-100 py-20 text-center">
         <p className="font-heading text-3xl md:text-4xl text-burgundy mb-6 italic">
           "Every cup is an invitation to be present."
         </p>

@@ -75,8 +75,8 @@ export default function MenuPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-burgundy text-white py-28 px-6 text-center">
-        <div className="max-w-2xl mx-auto">
+      <section className="bg-burgundy text-white py-28 text-center">
+        <div className="max-w-2xl mx-auto px-6">
           <p className="text-xs tracking-[0.6em] uppercase text-white/50 mb-5">
             What We Serve
           </p>
@@ -87,8 +87,8 @@ export default function MenuPage() {
       </section>
 
       {/* Menu grid */}
-      <section className="py-20 px-6 bg-white">
-        <div className="max-w-6xl mx-auto space-y-20">
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-6 space-y-20">
           {categories.map((category) => (
             <div key={category}>
               <div className="flex items-center gap-6 mb-10">
@@ -134,7 +134,7 @@ export default function MenuPage() {
       </section>
 
       {/* Note */}
-      <section className="bg-white border-t border-gray-100 py-12 px-6 text-center">
+      <section className="bg-white border-t border-gray-100 py-12 text-center">
         <p className="text-sm text-gray-400 max-w-lg mx-auto">
           Menu and prices subject to change. Ask your barista about milk
           alternatives, seasonal offerings, and daily specials.

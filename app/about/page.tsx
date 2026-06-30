@@ -10,8 +10,8 @@ export default function AboutPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-burgundy text-white py-28 px-6 text-center">
-        <div className="max-w-2xl mx-auto">
+      <section className="bg-burgundy text-white py-28 text-center">
+        <div className="max-w-2xl mx-auto px-6">
           <p className="text-xs tracking-[0.6em] uppercase text-white/50 mb-5">
             Our Story
           </p>
@@ -22,8 +22,8 @@ export default function AboutPage() {
       </section>
 
       {/* Main content */}
-      <section className="py-24 px-6">
-        <div className="max-w-2xl mx-auto space-y-8 text-gray-600 leading-relaxed">
+      <section className="py-24">
+        <div className="max-w-2xl mx-auto px-6 space-y-8 text-gray-600 leading-relaxed">
           <p className="text-xl text-gray-800 leading-relaxed">
             At Damda, we believe that coffee is more than a morning ritual — it
             is a craft, a conversation, and a small act of care in the middle of
@@ -70,8 +70,8 @@ export default function AboutPage() {
       </section>
 
       {/* Info strip */}
-      <section className="bg-white border-t border-gray-100 py-16 px-6">
-        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+      <section className="bg-white border-t border-gray-100 py-16">
+        <div className="max-w-4xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
           <div>
             <div className="w-8 h-0.5 bg-burgundy mb-5" />
             <h3 className="font-heading text-xl text-burgundy mb-4 tracking-wide">
@@ -108,7 +108,7 @@ export default function AboutPage() {
       </section>
 
       {/* Menu CTA */}
-      <section className="bg-white py-20 px-6 text-center border-t border-gray-100">
+      <section className="bg-white py-20 text-center border-t border-gray-100">
         <p className="font-heading text-2xl text-gray-800 mb-6">
           Ready to see what we brew?
         </p>
