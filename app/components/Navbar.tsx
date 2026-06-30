@@ -28,7 +28,7 @@ function DamdaLogo() {
         width="65"
         height="101"
         rx="32.5"
-        stroke="#F3FCEB"
+        stroke="#FBFCEB"
         strokeWidth="4"
       />
       <text
@@ -37,7 +37,7 @@ function DamdaLogo() {
         textAnchor="middle"
         dominantBaseline="middle"
         fontSize="36"
-        fill="#F3FCEB"
+        fill="#FBFCEB"
         style={{ fontFamily: "var(--font-black-han-sans), sans-serif" }}
       >
         담
@@ -48,7 +48,7 @@ function DamdaLogo() {
         textAnchor="middle"
         dominantBaseline="middle"
         fontSize="36"
-        fill="#F3FCEB"
+        fill="#FBFCEB"
         style={{ fontFamily: "var(--font-black-han-sans), sans-serif" }}
       >
         다
