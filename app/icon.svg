@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 108">
-  <rect width="72" height="108" fill="#760605"/>
-  <rect x="3.5" y="3.5" width="65" height="101" rx="32.5" stroke="#FBFCEB" stroke-width="4" fill="none"/>
-  <text x="36" y="44" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-weight="900" font-size="36" fill="#FBFCEB">담</text>
-  <text x="36" y="84" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-weight="900" font-size="36" fill="#FBFCEB">다</text>
+  <rect width="72" height="108" fill="#6B2929"/>
+  <rect x="3.5" y="3.5" width="65" height="101" rx="32.5" stroke="#fcfaec" stroke-width="4" fill="none"/>
+  <text x="36" y="44" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-weight="900" font-size="36" fill="#fcfaec">담</text>
+  <text x="36" y="84" text-anchor="middle" dominant-baseline="middle" font-family="sans-serif" font-weight="900" font-size="36" fill="#fcfaec">다</text>
 </svg>
