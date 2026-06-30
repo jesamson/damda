@@ -6,14 +6,14 @@ export default function Home() {
       {/* Hero */}
       <section className="min-h-[calc(100vh-4rem)] bg-burgundy flex items-center justify-center text-white text-center px-6">
         <div className="max-w-2xl">
-          <p className="text-xs tracking-[0.6em] uppercase text-white/60 mb-8">
-            Los Angeles, California
+          <p className="text-xs tracking-[0.6em] uppercase text-white/60 mb-4">
+            COFFEE &amp; MORE
           </p>
-          <h1 className="font-heading text-8xl md:text-[10rem] font-medium tracking-[0.15em] leading-none mb-8">
+          <h1 className="font-heading text-8xl md:text-[10rem] font-medium tracking-[0.15em] leading-none mb-4">
             DAMDA
           </h1>
-          <p className="text-lg md:text-xl text-white/75 font-light tracking-wide mb-14">
-            Coffee. Brewed with Intention.
+          <p className="text-sm tracking-widest text-white/70 mb-14">
+            228 1st St, Los Angeles, CA 90012
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
