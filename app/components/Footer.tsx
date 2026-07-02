@@ -54,7 +54,7 @@ export default function Footer() {
           </h3>
           <div className="flex flex-col gap-3 text-sm text-white/80 mb-8">
             <a
-              href="https://www.instagram.com/thelatteshop.official"
+              href="https://www.instagram.com/damdalosangeles"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-white transition-colors"
