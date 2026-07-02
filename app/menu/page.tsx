@@ -133,7 +133,7 @@ export default function MenuPage() {
       <section className="bg-cream border-t border-gray-100 py-12 text-center">
         <p className="text-sm text-gray-400 max-w-lg mx-auto">
           Menu and prices subject to change. Ask your barista about milk
-          alternatives, seasonal offerings, and daily specials.
+          alternatives.
         </p>
       </section>
     </>
