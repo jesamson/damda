@@ -12,64 +12,60 @@ const menuItems = [
     category: "Espresso Bar",
     price: "$3.50",
     description: "A concentrated shot of pure intention.",
-    photo: "photo-1510591509098-f4fdc6d0ff04",
+    src: `https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?auto=format&fit=crop&w=600&h=450&q=80`,
   },
   {
     name: "Cortado",
     category: "Espresso Bar",
     price: "$4.50",
     description: "Equal parts espresso and steamed milk — bold and balanced.",
-    photo: "photo-1514432324607-a09d9b4aefdd",
+    src: "/cortado.webp",
   },
   {
     name: "Cappuccino",
     category: "Espresso Bar",
     price: "$5.00",
     description: "Espresso with velvety foamed milk. A classic done right.",
-    photo: "photo-1572442388796-11668a67e53d",
+    src: `https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=600&h=450&q=80`,
   },
   {
     name: "Latte",
     category: "Espresso Bar",
     price: "$5.50",
     description: "Smooth, creamy, and grounding. A cup to settle into.",
-    photo: "photo-1494790108377-be9c29b29330",
+    src: "/latte.jpg",
   },
   {
     name: "Americano",
     category: "Espresso Bar",
     price: "$4.00",
     description: "Espresso diluted to a long, clean, and honest cup.",
-    photo: "photo-1509042239860-f550ce710b93",
+    src: "/americano.jpg",
   },
   {
     name: "Cold Brew",
     category: "Cold Drinks",
     price: "$5.50",
     description: "Steeped 18 hours. Smooth, bold, and never bitter.",
-    photo: "photo-1461023058943-07fcbe16d735",
+    src: `https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=600&h=450&q=80`,
   },
   {
     name: "Iced Latte",
     category: "Cold Drinks",
     price: "$6.00",
     description: "Espresso over ice with your choice of milk.",
-    photo: "photo-1553361371-9b22f78e8b1d",
+    src: "/iced-latte.jpg",
   },
   {
     name: "Matcha Latte",
     category: "Cold Drinks",
     price: "$6.50",
     description: "Ceremonial grade matcha. Hot or iced.",
-    photo: "photo-1571934811356-5cc061b6821f",
+    src: "/matcha-latte-iced.webp",
   },
 ];
 
 const categories = [...new Set(menuItems.map((item) => item.category))];
-
-function unsplash(id: string) {
-  return `https://images.unsplash.com/${id}?auto=format&fit=crop&w=600&h=450&q=80`;
-}
 
 export default function MenuPage() {
   return (
@@ -106,7 +102,7 @@ export default function MenuPage() {
                     <div key={item.name} className="group">
                       <div className="relative aspect-[4/3] overflow-hidden mb-4 bg-gray-100">
                         <Image
-                          src={unsplash(item.photo)}
+                          src={item.src}
                           alt={item.name}
                           fill
                           unoptimized

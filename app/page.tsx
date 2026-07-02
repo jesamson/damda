@@ -38,7 +38,7 @@ export default function Home() {
       {/* CTA band */}
       <section className="bg-cream border-t border-b border-gray-100 py-20 text-center">
         <p className="font-heading text-3xl md:text-4xl text-burgundy mb-6 italic">
-          "Every cup is an invitation to be present."
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         </p>
         <Link
           href="/menu"
