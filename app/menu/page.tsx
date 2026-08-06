@@ -3,69 +3,144 @@ import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Menu — Damda",
-  description: "Explore our espresso drinks and cold brew offerings.",
+  description: "Full menu for Damda café in Little Tokyo, Los Angeles.",
 };
 
-const menuItems = [
+const categories = [
   {
+    number: "01",
     name: "Espresso",
-    category: "Espresso Bar",
-    price: "$3.50",
-    description: "A concentrated shot of pure intention.",
-    src: `https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?auto=format&fit=crop&w=600&h=450&q=80`,
+    subtitle: "Classic espresso drinks, made with intention.",
+    items: [
+      { name: "Espresso", price: "3.5" },
+      { name: "Americano", price: "4.0" },
+      { name: "Cortado", price: "4.5" },
+      { name: "Cappuccino", price: "5.0" },
+      { name: "Latte", price: "5.5" },
+      {
+        name: "Latte with Add-ons",
+        note: "Simple Syrup, Agave, Vanilla, Lavender, Mocha",
+        price: "6.0",
+      },
+      { name: "Sunrise Americano", price: "7.0" },
+    ],
   },
   {
-    name: "Cortado",
-    category: "Espresso Bar",
-    price: "$4.50",
-    description: "Equal parts espresso and steamed milk — bold and balanced.",
-    src: "/cortado.webp",
+    number: "02",
+    name: "Signatures",
+    subtitle: "Drinks created to sip and enjoy.",
+    items: [
+      {
+        name: "Damda Latte",
+        note: "Short Vanilla Latte. Sweet Cream. Cocoa",
+        price: "7.0",
+      },
+      {
+        name: "Cinnamon Cream Latte",
+        note: "Short Vanilla Latte. Sweet Cream. Cinnamon",
+        price: "7.0",
+      },
+      {
+        name: "Signature Latte",
+        note: "Espresso & Condensed Milk Foam Over Iced Milk",
+        price: "7.0",
+      },
+      { name: "Double Mocha", price: "7.5" },
+      {
+        name: "Salted Caramel Cream Latte",
+        note: "Caramel. Cream. Maldon Salt. Blue Spirulina",
+        price: "7.5",
+      },
+      { name: "Classic Espresso Tonic", price: "7.0" },
+      {
+        name: "Yuzu Espresso Tonic",
+        note: "Elderflower, Yuzu, Honey",
+        price: "7.5",
+      },
+    ],
   },
   {
-    name: "Cappuccino",
-    category: "Espresso Bar",
-    price: "$5.00",
-    description: "Espresso with velvety foamed milk. A classic done right.",
-    src: `https://images.unsplash.com/photo-1572442388796-11668a67e53d?auto=format&fit=crop&w=600&h=450&q=80`,
-  },
-  {
-    name: "Latte",
-    category: "Espresso Bar",
-    price: "$5.50",
-    description: "Smooth, creamy, and grounding. A cup to settle into.",
-    src: "/latte.jpg",
-  },
-  {
-    name: "Americano",
-    category: "Espresso Bar",
-    price: "$4.00",
-    description: "Espresso diluted to a long, clean, and honest cup.",
-    src: "/americano.jpg",
-  },
-  {
+    number: "03",
     name: "Cold Brew",
-    category: "Cold Drinks",
-    price: "$5.50",
-    description: "Steeped 18 hours. Smooth, bold, and never bitter.",
-    src: `https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=600&h=450&q=80`,
+    subtitle: "Smooth, refreshing, and perfectly balanced.",
+    items: [
+      { name: "Cold Brew", price: "5.5" },
+      { name: "Yuzu Cold Brew", price: "6.5" },
+      { name: "Sweet Cream Cold Brew", price: "5.5" },
+      { name: "Chocolate Cream Cold Brew", price: "5.5" },
+    ],
   },
   {
-    name: "Iced Latte",
-    category: "Cold Drinks",
-    price: "$6.00",
-    description: "Espresso over ice with your choice of milk.",
-    src: "/iced-latte.jpg",
+    number: "04",
+    name: "Matcha",
+    subtitle: "Ceremonial grade matcha sourced from Uji.",
+    items: [
+      { name: "Matcha Americano", price: "6.25" },
+      { name: "Matcha Latte", price: "7.25" },
+      {
+        name: "Matcha Latte with Add-ons",
+        note: "Simple Syrup, Agave, Vanilla, Lavender",
+        price: "7.5",
+      },
+      { name: "Salted Caramel Cream Matcha Latte", price: "7.5" },
+      { name: "Sweet Cream Matcha Latte", price: "7.5" },
+      { name: "Chocolate Cream Matcha Latte", price: "7.5" },
+      { name: "Strawberry Matcha Latte", price: "7.5" },
+      { name: "Blueberry Matcha Latte", price: "7.5" },
+      { name: "Naju Pear Matcha Latte", price: "7.5" },
+      {
+        name: "Yuzu Matcha Tonic",
+        note: "Elderflower, Yuzu, Honey",
+        price: "8.0",
+      },
+    ],
   },
   {
-    name: "Matcha Latte",
-    category: "Cold Drinks",
-    price: "$6.50",
-    description: "Ceremonial grade matcha. Hot or iced.",
-    src: "/matcha-latte-iced.webp",
+    number: "05",
+    name: "Hojicha",
+    subtitle: "Roasted green tea, nutty and rich in flavor.",
+    items: [
+      { name: "Hojicha Latte", price: "6.75" },
+      {
+        name: "Hojicha Latte with Add-ons",
+        note: "Simple Syrup, Agave, Vanilla",
+        price: "7.0",
+      },
+      { name: "Sweet Cream Hojicha Latte", price: "7.25" },
+    ],
+  },
+  {
+    number: "06",
+    name: "Chai",
+    subtitle: "Spiced just right with a hint of sweetness.",
+    items: [
+      { name: "Chai Latte (Sweetened)", price: "6.5" },
+      { name: "Sweet Cream Chai Latte", price: "7.0" },
+    ],
+  },
+  {
+    number: "07",
+    name: "Non Caffeine",
+    subtitle: "Much needed any time of day.",
+    items: [
+      { name: "Yuzu & Honey", price: "5.0" },
+      { name: "Chocolate", price: "5.0" },
+      { name: "Orange Juice 12oz", price: "6.0" },
+    ],
+  },
+  {
+    number: "08",
+    name: "Tea",
+    subtitle: "Seasonal teas chosen by our team.",
+    items: [{ name: "See Selection", price: "5.0" }],
   },
 ];
 
-const categories = [...new Set(menuItems.map((item) => item.category))];
+const featured = [
+  { src: "/cortado.webp", label: "Cortado" },
+  { src: "/latte.jpg", label: "Latte" },
+  { src: "/matcha-latte-iced.webp", label: "Matcha" },
+];
 
 export default function MenuPage() {
   return (
@@ -74,64 +149,94 @@ export default function MenuPage() {
       <section className="bg-burgundy text-white py-28 text-center">
         <div className="max-w-2xl mx-auto px-6">
           <p className="text-xs tracking-[0.6em] uppercase text-white/50 mb-5">
-            What We Serve
+            Little Tokyo, Los Angeles
           </p>
-          <h1 className="font-heading text-5xl md:text-6xl font-medium tracking-wide leading-tight">
+          <h1 className="font-heading text-5xl md:text-6xl tracking-wide leading-tight">
             Our Menu
           </h1>
         </div>
       </section>
 
-      {/* Menu grid */}
-      <section className="py-20 bg-cream">
-        <div className="max-w-6xl mx-auto px-6 space-y-20">
-          {categories.map((category) => (
-            <div key={category}>
-              <div className="flex items-center gap-6 mb-10">
-                <div className="w-8 h-0.5 bg-burgundy flex-shrink-0" />
-                <h2 className="font-heading text-2xl text-burgundy tracking-wide">
-                  {category}
-                </h2>
-                <div className="flex-1 h-px bg-burgundy/15" />
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                {menuItems
-                  .filter((item) => item.category === category)
-                  .map((item) => (
-                    <div key={item.name} className="group">
-                      <div className="relative aspect-[4/3] overflow-hidden mb-4 bg-gray-100">
-                        <Image
-                          src={item.src}
-                          alt={item.name}
-                          fill
-                          unoptimized
-                          className="object-cover transition-transform duration-500 group-hover:scale-105"
-                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                        />
-                      </div>
-                      <div className="flex justify-between items-baseline mb-1.5">
-                        <h3 className="font-heading text-lg text-gray-900">
-                          {item.name}
-                        </h3>
-                        <span className="text-burgundy text-sm font-medium">
-                          {item.price}
-                        </span>
-                      </div>
-                      <p className="text-sm text-gray-400 leading-relaxed">
-                        {item.description}
-                      </p>
-                    </div>
-                  ))}
-              </div>
+      {/* Featured photos */}
+      <section className="bg-cream py-12">
+        <div className="max-w-6xl mx-auto px-6 grid grid-cols-3 gap-4">
+          {featured.map(({ src, label }) => (
+            <div key={label} className="relative aspect-[4/3] overflow-hidden">
+              <Image
+                src={src}
+                alt={label}
+                fill
+                unoptimized
+                className="object-cover"
+                sizes="(max-width: 768px) 33vw, 25vw"
+              />
             </div>
           ))}
         </div>
       </section>
 
-      {/* Note */}
-      <section className="bg-cream border-t border-gray-100 py-12 text-center">
-        <p className="text-sm text-gray-400 max-w-lg mx-auto">
+      {/* Full menu */}
+      <section className="bg-cream py-16">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-14">
+            {categories.map((cat) => (
+              <div key={cat.number}>
+                <p className="text-xs text-burgundy/50 font-mono mb-1">{cat.number}</p>
+                <div className="flex items-center gap-4 mb-1">
+                  <h2 className="font-heading text-2xl text-burgundy tracking-wide">
+                    {cat.name}
+                  </h2>
+                  <div className="flex-1 h-px bg-burgundy/20" />
+                </div>
+                <p className="text-xs text-gray-400 mb-6">{cat.subtitle}</p>
+
+                <ul className="space-y-3">
+                  {cat.items.map((item) => (
+                    <li key={item.name} className="border-b border-burgundy/10 pb-3">
+                      <div className="flex justify-between items-baseline gap-4">
+                        <span className="text-sm font-medium text-gray-800">
+                          {item.name}
+                        </span>
+                        <span className="text-sm text-burgundy shrink-0">
+                          ${item.price}
+                        </span>
+                      </div>
+                      {item.note && (
+                        <p className="text-xs text-gray-400 mt-0.5">{item.note}</p>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          {/* Add-ons */}
+          <div className="mt-16 border border-burgundy/20 p-8 max-w-sm">
+            <h3 className="font-heading text-xl text-burgundy tracking-wide mb-1">
+              Add-ons
+            </h3>
+            <div className="w-8 h-0.5 bg-burgundy mb-5" />
+            <p className="text-xs text-gray-400 mb-4">Regular milk default</p>
+            <ul className="space-y-2 text-sm text-gray-700">
+              <li className="flex justify-between">
+                <span>Oat Milk</span><span className="text-gray-400">+0</span>
+              </li>
+              <li className="flex justify-between">
+                <span>Almond Milk</span><span className="text-gray-400">+0</span>
+              </li>
+              <li className="flex justify-between">
+                <span>Koatji Oat</span><span className="text-gray-400">+0</span>
+              </li>
+            </ul>
+            <p className="text-xs text-burgundy/60 mt-4">Recommended for matchas</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Disclaimer */}
+      <section className="bg-cream border-t border-burgundy/10 py-12 text-center">
+        <p className="text-sm text-gray-400 max-w-lg mx-auto px-6">
           Menu and prices subject to change. Ask your barista about milk
           alternatives.
         </p>
