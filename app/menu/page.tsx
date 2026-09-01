@@ -8,30 +8,17 @@ export const metadata: Metadata = {
 export default function MenuPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="bg-burgundy text-white py-16 text-center">
-        <div className="max-w-2xl mx-auto px-6">
-          <p className="text-xs tracking-[0.6em] uppercase text-white/50 mb-4">
-            Little Tokyo, Los Angeles
-          </p>
-          <h1 className="font-heading text-5xl md:text-6xl tracking-wide leading-tight">
-            Our Menu
-          </h1>
-        </div>
-      </section>
-
-      {/* PDF embed — desktop */}
-      <section className="hidden md:block bg-cream">
+      {/* PDF — full height, no toolbar */}
+      <div className="hidden md:block" style={{ height: "calc(100vh - 4rem)" }}>
         <iframe
-          src="/menu.pdf"
-          className="w-full"
-          style={{ height: "90vh" }}
+          src="/menu.pdf#toolbar=0&navpanes=0&scrollbar=0"
+          className="w-full h-full"
           title="Damda Menu"
         />
-      </section>
+      </div>
 
       {/* Mobile fallback */}
-      <section className="md:hidden bg-cream py-16 text-center px-6">
+      <div className="md:hidden bg-cream py-16 text-center px-6">
         <p className="text-sm text-gray-500 mb-6">
           View or download the full menu below.
         </p>
@@ -43,7 +30,7 @@ export default function MenuPage() {
         >
           Open Menu PDF
         </a>
-      </section>
+      </div>
     </>
   );
 }
