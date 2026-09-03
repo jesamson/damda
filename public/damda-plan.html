@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Damda Plan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --burgundy: #6B2929;
+      --burgundy-dark: #4a1c1c;
+      --cream: #fcfaec;
+      --text: #1a1a1a;
+      --muted: #5a5a5a;
+      --border: rgba(107,41,41,0.15);
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    /* Cover */
+    .cover {
+      background: var(--burgundy);
+      color: var(--cream);
+      padding: 80px 64px 64px;
+      min-height: 280px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    .cover-eyebrow {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      opacity: 0.6;
+      margin-bottom: 16px;
+    }
+
+    .cover-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(56px, 8vw, 96px);
+      letter-spacing: 0.06em;
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+
+    .cover-subtitle {
+      font-size: 13px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      opacity: 0.7;
+    }
+
+    /* Body */
+    .content {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 64px 48px 96px;
+    }
+
+    /* Section */
+    .section { margin-bottom: 56px; }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--burgundy);
+    }
+
+    .section-number {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 13px;
+      letter-spacing: 0.2em;
+      color: var(--burgundy);
+      opacity: 0.5;
+    }
+
+    .section-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 28px;
+      letter-spacing: 0.08em;
+      color: var(--burgundy);
+    }
+
+    p { color: var(--muted); margin-bottom: 12px; }
+    p:last-child { margin-bottom: 0; }
+
+    ul {
+      list-style: none;
+      margin: 12px 0;
+      padding: 0;
+    }
+
+    ul li {
+      color: var(--muted);
+      padding: 6px 0 6px 20px;
+      position: relative;
+      border-bottom: 1px solid var(--border);
+    }
+
+    ul li:last-child { border-bottom: none; }
+
+    ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--burgundy);
+      opacity: 0.5;
+    }
+
+    /* Steps */
+    .steps { display: flex; flex-direction: column; gap: 16px; margin-top: 16px; }
+
+    .step {
+      display: flex;
+      gap: 20px;
+      padding: 20px;
+      background: white;
+      border-left: 3px solid var(--burgundy);
+    }
+
+    .step-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 32px;
+      color: var(--burgundy);
+      opacity: 0.3;
+      line-height: 1;
+      min-width: 32px;
+    }
+
+    .step-label {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 16px;
+      letter-spacing: 0.1em;
+      color: var(--burgundy);
+      margin-bottom: 4px;
+    }
+
+    .step p { margin: 0; font-size: 13px; }
+
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 16px;
+      font-size: 13px;
+    }
+
+    thead tr {
+      background: var(--burgundy);
+      color: var(--cream);
+    }
+
+    thead th {
+      padding: 10px 14px;
+      text-align: left;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      font-size: 11px;
+      text-transform: uppercase;
+    }
+
+    tbody tr { border-bottom: 1px solid var(--border); }
+    tbody tr:last-child { border-bottom: none; }
+    tbody tr:nth-child(even) { background: rgba(107,41,41,0.04); }
+
+    tbody td {
+      padding: 10px 14px;
+      color: var(--muted);
+      vertical-align: top;
+    }
+
+    tbody td:first-child { color: var(--text); font-weight: 500; }
+
+    /* Sub-section heading */
+    .sub-heading {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 18px;
+      letter-spacing: 0.1em;
+      color: var(--burgundy);
+      margin: 32px 0 8px;
+    }
+
+    .note {
+      font-size: 12px;
+      color: var(--muted);
+      opacity: 0.8;
+      font-style: italic;
+      margin-top: 8px;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--burgundy);
+      color: var(--cream);
+      text-align: center;
+      padding: 32px 24px;
+    }
+
+    footer .logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 28px;
+      letter-spacing: 0.3em;
+      margin-bottom: 6px;
+    }
+
+    footer p {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      opacity: 0.5;
+      color: var(--cream);
+    }
+
+    @media print {
+      .cover { page-break-after: always; }
+      .section { page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cover -->
+  <div class="cover">
+    <p class="cover-eyebrow">Coffee, Lifestyle & Home Goods Brand</p>
+    <h1 class="cover-title">The Damda Plan</h1>
+    <p class="cover-subtitle">Website · Shopify · DoorDash · Grubhub</p>
+  </div>
+
+  <div class="content">
+
+    <!-- 1 -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-number">01</span>
+        <h2 class="section-title">What We're Building</h2>
+      </div>
+      <p>Three connected pieces make up the online side of the business:</p>
+      <ul>
+        <li><strong>Website</strong> — the public face of the brand (already built), which will be updated to connect to Shopify for orders.</li>
+        <li><strong>Shopify Store</strong> — handles online orders, payments, and inventory for products (coffee, home goods, merch).</li>
+        <li><strong>DoorDash & Grubhub</strong> — separate delivery apps for food/drink items, connected to the café's day-to-day menu.</li>
+      </ul>
+      <p class="note">These three systems talk to each other but are run as separate accounts, each with its own login, fees, and settings. Think of me as the person who builds, connects, and maintains all three — not the owner of any of them.</p>
+    </div>
+
+    <!-- 2 -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-number">02</span>
+        <h2 class="section-title">Who Owns What (and Why)</h2>
+      </div>
+      <p>Every account below should be created and owned by the business — meaning your business email, your card on file, and your bank account for payouts. I'll be added as a manager/collaborator on each so I can do the setup and ongoing work without being the account holder.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Account</th>
+            <th>Owned By</th>
+            <th>I Get Access Via</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Business email (e.g. Google Workspace)</td>
+            <td>Business</td>
+            <td>Added as a user, not given the password</td>
+          </tr>
+          <tr>
+            <td>Shopify store</td>
+            <td>Business</td>
+            <td>Staff account / collaborator invite</td>
+          </tr>
+          <tr>
+            <td>Website domain & hosting</td>
+            <td>Business</td>
+            <td>Added as project collaborator</td>
+          </tr>
+          <tr>
+            <td>DoorDash Merchant account</td>
+            <td>Business</td>
+            <td>Invited as a portal user</td>
+          </tr>
+          <tr>
+            <td>Grubhub for Restaurants account</td>
+            <td>Business</td>
+            <td>Invited as a portal user</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="note">Why it matters: this keeps billing, taxes, and ownership clean for the business, and protects both of us if the working relationship ever changes down the road.</p>
+    </div>
+
+    <!-- 3 -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-number">03</span>
+        <h2 class="section-title">What I Need From You to Get Started</h2>
+      </div>
+      <ul>
+        <li>Legal business name, EIN, and business address</li>
+        <li>A business bank account for payouts (Shopify, DoorDash, and Grubhub all pay out here)</li>
+        <li>A business email — I can help set one up if you don't have one yet</li>
+        <li>A full menu / product list with prices and photos, for both the Shopify store and the delivery apps</li>
+        <li>Business license / food handling permit info, if required for delivery platforms in our city</li>
+      </ul>
+    </div>
+
+    <!-- 4 -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-number">04</span>
+        <h2 class="section-title">How the Setup Process Works</h2>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div>
+            <p class="step-label">Accounts</p>
+            <p>You sign up for Shopify, DoorDash, and Grubhub using your business info, email, and card. This takes about 15–20 minutes per platform. I can walk you through each sign-up live over a screen share so nothing gets missed.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div>
+            <p class="step-label">Access</p>
+            <p>Once each account exists, you send me a collaborator/staff invite (a couple of clicks — I'll show you exactly where to click) so I can start building without ever needing your passwords.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div>
+            <p class="step-label">Build & Connect</p>
+            <p>I update the website to connect to Shopify for checkout, and set up your menu, photos, and pricing inside DoorDash and Grubhub.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div>
+            <p class="step-label">Review & Launch</p>
+            <p>We review everything together before it goes live — pricing, photos, descriptions, and how orders will flow day-to-day.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-number">05</span>
+        <h2 class="section-title">How I'll Access Each Account</h2>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Platform</th>
+            <th>Access Method</th>
+            <th>Note</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Shopify</td>
+            <td>Staff account or Collaborator Request</td>
+            <td>Basic plan includes 0 staff seats — I'll use a Collaborator Request if you're on Basic</td>
+          </tr>
+          <tr>
+            <td>DoorDash</td>
+            <td>Invited as "Store Manager"</td>
+            <td>Gives me full menu/hours/photo access without business-wide admin rights</td>
+          </tr>
+          <tr>
+            <td>Grubhub</td>
+            <td>Invited as "Admin" user</td>
+            <td>Make sure Admin (not Basic) is selected when you send the invite</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="note">On every platform, banking/payout details and the signed merchant agreement stay tied to your owner login no matter what role I'm given — that's expected, and I don't need access to those to do the setup work.</p>
+    </div>
+
+    <!-- 6 -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-number">06</span>
+        <h2 class="section-title">Costs & Fees</h2>
+      </div>
+
+      <p class="sub-heading">Website Hosting — Vercel</p>
+      <table>
+        <thead>
+          <tr><th>Item</th><th>Cost</th><th>Notes</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Vercel Pro plan</td>
+            <td>$20/month per seat</td>
+            <td>Required for a live commercial site. Includes 1TB bandwidth/mo.</td>
+          </tr>
+          <tr>
+            <td>Domain registration</td>
+            <td>~$12–$20/year</td>
+            <td>Separate from hosting; renews annually</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p class="sub-heading">Shopify</p>
+      <table>
+        <thead>
+          <tr><th>Plan</th><th>Monthly Cost</th><th>Transaction Fee (Shopify Payments)</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Basic</td>
+            <td>$39/mo ($29/mo billed annually)</td>
+            <td>2.9% + 30¢ per sale</td>
+          </tr>
+          <tr>
+            <td>Grow</td>
+            <td>$105/mo ($79/mo billed annually)</td>
+            <td>2.7% + 30¢ per sale</td>
+          </tr>
+          <tr>
+            <td>Advanced</td>
+            <td>$399/mo ($299/mo billed annually)</td>
+            <td>2.5% + 30¢ per sale</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="note">Basic currently includes 0 staff seats — see Section 5 on how that affects access.</p>
+
+      <p class="sub-heading">DoorDash</p>
+      <p>No monthly fee on any plan — pickup orders are a flat 6% commission across all three.</p>
+      <table>
+        <thead>
+          <tr><th>Plan</th><th>Delivery Commission</th><th>Pros</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Basic</td>
+            <td>15%</td>
+            <td>Lowest cost per order — good for testing delivery demand or protecting thin margins</td>
+          </tr>
+          <tr>
+            <td>Plus</td>
+            <td>25%</td>
+            <td>Wider delivery radius + access to DashPass subscribers (frequent, high-value customers)</td>
+          </tr>
+          <tr>
+            <td>Premier</td>
+            <td>30%</td>
+            <td>Widest delivery reach, DashPass access, free automatic ads, $200 photography credit, refunded commission if 20 or fewer orders in a month</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p class="sub-heading">Grubhub</p>
+      <p>A separate ~3.05% + 30¢ card processing fee applies on every order, on top of whichever plan below.</p>
+      <table>
+        <thead>
+          <tr><th>Plan</th><th>Marketing Commission</th><th>Pros</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Basic</td>
+            <td>5% self-delivery/pickup (15% if using Grubhub's drivers)</td>
+            <td>Cheapest option — includes account support, free menu photoshoot, welcome kit, and POS integration</td>
+          </tr>
+          <tr>
+            <td>Plus</td>
+            <td>15%</td>
+            <td>Adds Grubhub's own delivery drivers, so you don't need your own delivery staff to reach more customers</td>
+          </tr>
+          <tr>
+            <td>All-Access</td>
+            <td>20%</td>
+            <td>Highest visibility — priority placement in search/browse, delivery included, and access to Grubhub+ loyalty customers</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <footer>
+    <p class="logo">DAMDA</p>
+    <p>Pouring Everyday Rituals · Little Tokyo, Los Angeles</p>
+  </footer>
+
+</body>
+</html>
